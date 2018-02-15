@@ -1,0 +1,54 @@
+.loginBox{
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+}
+
+h2{
+    text-align: center;
+    padding: 10px 0;
+    background: #00a9dd;
+    color: #ffffff;
+    margin: 0;
+
+}
+
+.inputError{
+    color: red;
+    text-align: center;
+}
+
+label{
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+input[type=text], input[type=password]{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    border: 0px;
+    width: 50%;
+    border: 1px solid #d1d1d1;
+}
+
+input[type=submit]{
+    border: 2px solid #555555;
+    padding: 10px;
+    color: #000000;
+    background: #ffffff;
+    float: right;
+    margin: 10px;
+}
+
+input[type=submit]:hover{
+    background: #555555;
+    color: #ffffff;
+}
