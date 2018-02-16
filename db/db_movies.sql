@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 15, 2018 at 03:55 AM
+-- Generation Time: Feb 16, 2018 at 05:33 AM
 -- Server version: 5.7.19
 -- PHP Version: 7.0.23
 
@@ -46,6 +46,20 @@ INSERT INTO `tbl_arating` (`arating_id`, `arating_name`, `arating_desc`) VALUES
 (3, 'PG-13', 'PG-13 – Parents Strongly Cautioned\r\nSome material may be inappropriate for children under 13. Parents are urged to be cautious. Some material may be inappropriate for pre-teenagers.'),
 (4, 'R', 'R – Restricted\r\nUnder 17 requires accompanying parent or adult guardian. Contains some adult material. Parents are urged to learn more about the film before taking their young children with them. '),
 (5, 'NC-17', 'NC-17 – Adults Only\r\nNo One 17 and Under Admitted. Clearly adult. Children are not admitted. ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_attempt`
+--
+
+DROP TABLE IF EXISTS `tbl_attempt`;
+CREATE TABLE IF NOT EXISTS `tbl_attempt` (
+  `attempt_id` int(11) NOT NULL AUTO_INCREMENT,
+  `attempt_count` int(2) NOT NULL,
+  `attempt_ip` varchar(45) NOT NULL,
+  PRIMARY KEY (`attempt_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1072,7 +1086,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`) VALUES
-(1, 'Mike', 'mike', 'yang', 'mike@abc.ca', '2018-02-15 08:50:26', '::1');
+(1, 'Mike', 'mike', 'yang', 'mike@abc.ca', '2018-02-16 05:32:07', '::1');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
