@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 23, 2018 at 01:41 AM
+-- Generation Time: Feb 16, 2018 at 05:33 AM
 -- Server version: 5.7.19
 -- PHP Version: 7.0.23
 
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `tbl_attempt` (
   `attempt_count` int(2) NOT NULL,
   `attempt_ip` varchar(45) NOT NULL,
   PRIMARY KEY (`attempt_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1076,18 +1076,17 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `user_name` varchar(250) NOT NULL,
   `user_pass` varchar(250) NOT NULL,
   `user_email` varchar(250) NOT NULL,
-  `user_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
-  `user_level` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_level`) VALUES
-(41, 'test', 'test', '$2y$10$nvDjIO1VH7HMCAIamZ8SB.xZ.7df0ncKgHOx.NErwVDYJln4gRf/G', 'wyao@alcanada.com', '2018-02-23 01:38:24', '::1', '2');
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`) VALUES
+(1, 'Mike', 'mike', 'yang', 'mike@abc.ca', '2018-02-16 05:32:07', '::1');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

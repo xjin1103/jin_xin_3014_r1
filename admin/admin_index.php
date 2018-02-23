@@ -13,9 +13,6 @@
 			$lastLoginTime = $founduser['user_date'];
 		}
 	}
-	else{
-		header("Location: admin_login.php");
-	}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -26,22 +23,15 @@
 	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 	</head>
 	<body>
-		<div class="adminPanel">
-			<h2>Administration Panel</h2>
-			<div class="last-time-login">
-				<?php if(!empty($lastLoginTime)) echo "<p>Last Time Successful Login: " . $lastLoginTime . "</p>"; ?>
-			</div>
-			<div class="greetings">
-				<?php	if($currentTime > "00:00:00" && $currentTime < "12:00:00"){ echo "<h3>Good morning, " . $_SESSION['user_name'] . ". Welcome to administration panel.</h3>"; }
-						if($currentTime > "12:00:00" && $currentTime < "17:00:00"){ echo "<h3>Good afternoon, " . $_SESSION['user_name'] . ". Welcome to administration panel.</h3>"; }
-						if($currentTime > "17:00:00" && $currentTime < "20:00:00"){ echo "<h3>Good evening, " . $_SESSION['user_name'] . ". Welcome to administration panel.</h3>"; }
-						if($currentTime > "20:00:00" && $currentTime < "24:00:00"){ echo "<h3>Good night, " . $_SESSION['user_name'] . ". Welcome to administration panel.</h3>"; }	
-				?>
-			</div>
-			<div class="navigation">
-				<a href="admin_createuser.php">Create User</a>
-				<a href="phpscripts/caller.php?caller_id=logout">Sign Out</a>
-			</div>
+		<div class="last-time-login">
+			<?php if(!empty($lastLoginTime)) echo "<p>Last Time Successful Login: " . $lastLoginTime . "</p>"; ?>
+		</div>
+		<div class="greetings">
+			<?php	if($currentTime > "00:00:00" && $currentTime < "12:00:00"){ echo "Good morning, " . $_SESSION['user_name'] . ". Welcome to administration panel."; }
+					if($currentTime > "12:00:00" && $currentTime < "17:00:00"){ echo "Good afternoon, " . $_SESSION['user_name'] . ". Welcome to administration panel."; }
+					if($currentTime > "17:00:00" && $currentTime < "20:00:00"){ echo "Good evening, " . $_SESSION['user_name'] . ". Welcome to administration panel."; }
+					if($currentTime > "20:00:00" && $currentTime < "24:00:00"){ echo "Good night, " . $_SESSION['user_name'] . ". Welcome to administration panel."; }	
+			?>
 		</div>
 	</body>
 </html>
